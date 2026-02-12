@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aventura7 · El RPG definitivo en Roblox</title>
+    <title>Aventura7 · Juego de aventura en Roblox</title>
     
     <!-- Meta Tags -->
     <meta property="og:title" content="Aventura7">
-    <meta property="og:description" content="Embárcate en la aventura más épica de Roblox. Mazmorras, tesoros y misterios te esperan.">
-    <meta property="og:image" content="https://tr.rbxcdn.com/30day/Avatar-3D-12M9L2K3J4H5N6B7V8C9X0Z1Q2W3E4R5T6Y7U8I9O0P1A2S3D4F5G6H7J8K9L0">
+    <meta property="og:description" content="Juego de aventura en desarrollo para Roblox. Próximamente en 2026.">
+    <meta property="og:image" content="https://tr.rbxcdn.com/30day/Avatar-3D-Placeholder">
     <meta name="twitter:card" content="summary_large_image">
     
     <!-- Fonts -->
@@ -143,21 +143,16 @@
         }
         
         .btn-jugar {
-            background: var(--gradient);
+            background: rgba(255,255,255,0.05);
             color: white;
-            border: none;
+            border: 1px solid rgba(255,255,255,0.1);
             padding: 0.7rem 1.8rem;
             border-radius: 50px;
             font-weight: 700;
             font-size: 0.95rem;
-            cursor: pointer;
+            cursor: not-allowed;
             transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(107, 70, 193, 0.3);
-        }
-        
-        .btn-jugar:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(107, 70, 193, 0.5);
+            opacity: 0.8;
         }
         
         .hamburger {
@@ -218,15 +213,16 @@
         }
         
         .btn-primary {
-            background: var(--gradient);
+            background: rgba(255,255,255,0.05);
             color: white;
-            border: none;
+            border: 1px solid rgba(255,255,255,0.1);
             padding: 1rem 2.5rem;
             border-radius: 50px;
             font-weight: 700;
             font-size: 1.1rem;
-            cursor: pointer;
+            cursor: not-allowed;
             transition: 0.3s;
+            opacity: 0.8;
         }
         
         .btn-secondary {
@@ -313,23 +309,6 @@
             margin-bottom: 2rem;
         }
         
-        .features-list {
-            list-style: none;
-        }
-        
-        .features-list li {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .features-list li::before {
-            content: '✦';
-            color: var(--secondary);
-            font-size: 1.2rem;
-        }
-        
         .about-image {
             background: rgba(107, 70, 193, 0.1);
             border-radius: 20px;
@@ -351,47 +330,61 @@
             margin-bottom: 1rem;
         }
         
-        /* ===== FEATURES ===== */
-        .features {
+        /* ===== STATUS ===== */
+        .status {
             padding: 6rem 2rem;
             background: rgba(11, 10, 15, 0.8);
         }
         
-        .features-grid {
-            max-width: 1280px;
+        .status-container {
+            max-width: 800px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            text-align: center;
         }
         
-        .feature-card {
+        .status-card {
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: 0.3s;
+            border-radius: 30px;
+            padding: 3rem;
         }
         
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            background: rgba(107, 70, 193, 0.05);
+        .status-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
         }
         
-        .feature-icon {
-            font-size: 2.5rem;
+        .status-card h3 {
+            font-size: 2rem;
             margin-bottom: 1rem;
         }
         
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+        .status-card p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
         }
         
-        .feature-card p {
-            color: var(--gray);
-            font-size: 0.95rem;
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        
+        .progress-fill {
+            width: 15%;
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 10px;
+        }
+        
+        .status-date {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 1.2rem;
         }
         
         /* ===== ROADMAP ===== */
@@ -522,15 +515,16 @@
         }
         
         .btn-cta {
-            background: var(--gradient);
+            background: rgba(255,255,255,0.05);
             color: white;
-            border: none;
+            border: 1px solid rgba(255,255,255,0.1);
             padding: 1.2rem 3rem;
             border-radius: 50px;
             font-weight: 700;
             font-size: 1.2rem;
-            cursor: pointer;
+            cursor: not-allowed;
             transition: 0.3s;
+            opacity: 0.8;
         }
         
         /* ===== FOOTER ===== */
@@ -580,6 +574,11 @@
             color: var(--gray);
             text-decoration: none;
             font-size: 1.5rem;
+            transition: 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--light);
         }
         
         .copyright {
@@ -624,21 +623,13 @@
             color: var(--gray);
         }
         
-        .game-link {
-            display: inline-block;
-            background: var(--gradient);
-            color: white;
-            text-decoration: none;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            margin-top: 1.5rem;
-            font-weight: 700;
+        .close:hover {
+            color: var(--light);
         }
         
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .hero h1 { font-size: 4rem; }
-            .features-grid { grid-template-columns: repeat(2, 1fr); }
             .team-grid { grid-template-columns: repeat(2, 1fr); }
         }
         
@@ -652,7 +643,6 @@
             .stats { flex-direction: column; gap: 1rem; }
             
             .about-grid { grid-template-columns: 1fr; }
-            .features-grid { grid-template-columns: 1fr; }
             .team-grid { grid-template-columns: 1fr; }
             
             .timeline::before { left: 0; }
@@ -684,11 +674,11 @@
             <ul class="nav-links">
                 <li><a href="#inicio" class="active">Inicio</a></li>
                 <li><a href="#about">El Juego</a></li>
-                <li><a href="#features">Características</a></li>
+                <li><a href="#status">Estado</a></li>
                 <li><a href="#roadmap">Hoja de Ruta</a></li>
                 <li><a href="#team">Equipo</a></li>
             </ul>
-            <button class="btn-jugar" onclick="openModal()">✨ JUGAR AHORA</button>
+            <button class="btn-jugar">⏳ EN DESARROLLO</button>
             <div class="hamburger">☰</div>
         </nav>
     </header>
@@ -696,25 +686,25 @@
     <!-- HERO -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <span class="badge">YA DISPONIBLE EN ROBLOX</span>
-            <h1>FORJA TU LEYENDA</h1>
-            <p class="hero-sub">Explora tierras misteriosas, derrota criaturas legendarias y descubre tesoros ocultos en el RPG más ambicioso de Roblox.</p>
+            <span class="badge">EN DESARROLLO · 2026</span>
+            <h1>AVENTURA7</h1>
+            <p class="hero-sub">Un juego de aventura para Roblox. Actualmente en desarrollo. Sin fecha confirmada.</p>
             <div class="hero-buttons">
-                <button class="btn-primary" onclick="openModal()">🎮 COMENZAR AVENTURA</button>
-                <button class="btn-secondary" onclick="playTrailer()">▶ VER TRÁILER</button>
+                <button class="btn-primary">⏳ PRÓXIMAMENTE</button>
+                <button class="btn-secondary" onclick="document.getElementById('status').scrollIntoView({behavior: 'smooth'})">📋 VER ESTADO</button>
             </div>
             <div class="stats">
                 <div class="stat-item">
-                    <span class="stat-number">1,200+</span>
-                    <span class="stat-label">Jugadores en Beta</span>
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Jugadores (en desarrollo)</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">15</span>
-                    <span class="stat-label">Mazmorras</span>
+                    <span class="stat-number">2026</span>
+                    <span class="stat-label">Año estimado</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">4.8</span>
-                    <span class="stat-label">⭐ ⭐ ⭐ ⭐ ⭐</span>
+                    <span class="stat-number">⏳</span>
+                    <span class="stat-label">En progreso</span>
                 </div>
             </div>
         </div>
@@ -723,66 +713,37 @@
     <!-- ABOUT -->
     <section id="about" class="about">
         <div class="section-header">
-            <h2>Bienvenido a <span>Aventura7</span></h2>
-            <p>El RPG que estabas esperando en Roblox</p>
+            <h2>Sobre <span>Aventura7</span></h2>
+            <p>Un nuevo juego de aventura para Roblox</p>
         </div>
         <div class="about-grid">
             <div class="about-content">
-                <h3>Un mundo por descubrir</h3>
-                <p>Aventura7 no es solo un juego, es una experiencia. Con más de 10 horas de contenido, mazmorras desafiantes y un sistema de misiones dinámico, cada partida es única.</p>
-                <ul class="features-list">
-                    <li>Sistema de clases: Guerrero, Mago, Arquero</li>
-                    <li>Más de 50 enemigos únicos</li>
-                    <li>Objetos legendarios y crafting</li>
-                    <li>Eventos semanales en vivo</li>
-                </ul>
+                <h3>¿Qué es Aventura7?</h3>
+                <p>Es un juego de aventura que estamos desarrollando para Roblox. Queremos crear una experiencia única, pero aún estamos en fases tempranas de desarrollo. Todo lo que podemos decir es que será un juego de aventura.</p>
+                <p style="margin-top: 1rem; color: var(--gray); font-style: italic;">Más información pronto. Gracias por tu paciencia.</p>
             </div>
             <div class="about-image">
                 <div class="image-placeholder">
-                    <div class="emoji">🏰</div>
-                    <p>Previsualización del juego</p>
-                    <small>Próximamente: Screenshots</small>
+                    <div class="emoji">🏗️</div>
+                    <p>En construcción</p>
+                    <small>Próximamente: imágenes del juego</small>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FEATURES -->
-    <section id="features" class="features">
-        <div class="section-header">
-            <h2>Características <span>Épicas</span></h2>
-            <p>Todo lo que necesitas para una aventura inolvidable</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">⚔️</div>
-                <h3>Combate Dinámico</h3>
-                <p>Sistema de combate fluido con habilidades especiales y combos</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🗺️</div>
-                <h3>Mundo Abierto</h3>
-                <p>Explora 5 reinos diferentes, cada uno con su bioma y secretos</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">👥</div>
-                <h3>Multijugador</h3>
-                <p>Forma grupos de hasta 4 jugadores y enfréntate a jefes épicos</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📜</div>
-                <h3>Sistema de Misiones</h3>
-                <p>Misiones principales y secundarias con historia ramificada</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">⚒️</div>
-                <h3>Crafteo</h3>
-                <p>Crea tus propias armas y armaduras con recursos del mundo</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🏆</div>
-                <h3>Logros</h3>
-                <p>Más de 100 logros para los jugadores más completistas</p>
+    <!-- STATUS -->
+    <section id="status" class="status">
+        <div class="status-container">
+            <div class="status-card">
+                <div class="status-icon">⚒️</div>
+                <h3>En desarrollo activo</h3>
+                <p>Aventura7 está siendo desarrollado actualmente. Estamos trabajando en la base del juego y los sistemas principales.</p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="status-date">Lanzamiento estimado: 2026</div>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem;">*Fecha no confirmada, puede cambiar</p>
             </div>
         </div>
     </section>
@@ -791,35 +752,35 @@
     <section id="roadmap" class="roadmap">
         <div class="section-header">
             <h2>Hoja de <span>Ruta</span></h2>
-            <p>El viaje apenas comienza</p>
+            <p>Lo que planeamos (sujeto a cambios)</p>
         </div>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>Beta Cerrada</h3>
-                    <div class="date">✅ Completado - Enero 2025</div>
-                    <p>Pruebas con primeros 500 jugadores. Sistema de combate y mazmorras iniciales.</p>
+                    <h3>Inicio del desarrollo</h3>
+                    <div class="date">✅ Completado - Enero 2026</div>
+                    <p>Primeras líneas de código. Configuración inicial del proyecto.</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>Lanzamiento Oficial</h3>
-                    <div class="date">🚀 Marzo 2025</div>
-                    <p>Versión 1.0 con 5 mazmorras, 3 clases y evento de lanzamiento.</p>
+                    <h3>Prototipo jugable</h3>
+                    <div class="date">🔄 En progreso - Mediados 2026</div>
+                    <p>Primeras mecánicas básicas de aventura.</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>Actualización: Reino de Hielo</h3>
-                    <div class="date">❄️ Mayo 2025</div>
-                    <p>Nueva zona, enemigos de hielo y jefe legendario.</p>
+                    <h3>Versión alfa</h3>
+                    <div class="date">⏳ Finales 2026</div>
+                    <p>Primeras pruebas internas.</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>Sistema de Gremios</h3>
-                    <div class="date">🏰 Julio 2025</div>
-                    <p>Forma tu gremio, guerras de gremios y mazmorras gremiales.</p>
+                    <h3>Lanzamiento</h3>
+                    <div class="date">❓ Por definir</div>
+                    <p>Cuando esté listo.</p>
                 </div>
             </div>
         </div>
@@ -828,36 +789,38 @@
     <!-- TEAM -->
     <section id="team" class="team">
         <div class="section-header">
-            <h2>Conoce al <span>Equipo</span></h2>
-            <p>Detrás de cada gran aventura hay un gran equipo</p>
+            <h2>El <span>Equipo</span></h2>
+            <p>Quienes estamos construyendo esto</p>
         </div>
         <div class="team-grid">
             <div class="team-card">
-                <div class="team-avatar">🧙</div>
-                <h3>AlexDev</h3>
-                <div class="role">Fundador & Lead Developer</div>
-                <p>5 años creando experiencias en Roblox. Su sueño: crear el mejor RPG de la plataforma.</p>
+                <div class="team-avatar">🧑‍💻</div>
+                <h3>Dev</h3>
+                <div class="role">Desarrollador</div>
+                <p>Creando Aventura7 desde cero.</p>
             </div>
             <div class="team-card">
                 <div class="team-avatar">🎨</div>
-                <h3>MartaArt</h3>
-                <div class="role">Lead 3D Artist</div>
-                <p>Especialista en entornos fantásticos y modelado de criaturas.</p>
+                <h3>Artista</h3>
+                <div class="role">Diseñador</div>
+                <p>Dando forma al mundo.</p>
             </div>
             <div class="team-card">
                 <div class="team-avatar">⚙️</div>
-                <h3>CarlosMech</h3>
-                <div class="role">Game Systems Designer</div>
-                <p>Diseña sistemas de progresión y combate. Adicto a los MMOs.</p>
+                <h3>Diseñador</h3>
+                <div class="role">Game Designer</div>
+                <p>Pensando la aventura.</p>
             </div>
         </div>
+        <p style="text-align: center; margin-top: 2rem; color: var(--gray);">*Equipo pequeño, aprendiendo sobre la marcha</p>
     </section>
 
     <!-- CTA -->
     <section class="cta">
-        <h2>¿Listo para la aventura?</h2>
-        <p>Miles de jugadores ya están explorando Aventura7. Únete ahora, es gratis.</p>
-        <button class="btn-cta" onclick="openModal()">✨ JUGAR AHORA EN ROBLOX</button>
+        <h2>¿Quieres seguir el progreso?</h2>
+        <p>Todavía no hay nada que jugar, pero puedes seguirnos para enterarte cuando haya novedades.</p>
+        <button class="btn-cta">⏳ PRÓXIMAMENTE</button>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray);">Mientras tanto, estamos aquí, programando.</p>
     </section>
 
     <!-- FOOTER -->
@@ -868,36 +831,24 @@
             </div>
             <div class="footer-links">
                 <a href="#inicio">Inicio</a>
-                <a href="#about">Juego</a>
-                <a href="#roadmap">Roadmap</a>
-                <a href="#team">Equipo</a>
+                <a href="#about">El juego</a>
+                <a href="#status">Estado</a>
+                <a href="#roadmap">Ruta</a>
             </div>
             <div class="social-links">
                 <a href="#">📱</a>
                 <a href="#">💬</a>
                 <a href="#">📺</a>
-                <a href="#">🐦</a>
             </div>
         </div>
         <div class="copyright">
-            <p>© 2025 Aventura7. Todos los derechos reservados.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem;">Creado con ❤️ para la comunidad de Roblox</p>
+            <p>© 2026 Aventura7. Juego en desarrollo para Roblox.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">Sin fecha confirmada. Sin características prometidas. Solo trabajo y ganas.</p>
         </div>
     </footer>
 
-    <!-- MODAL DE JUEGO -->
-    <div id="gameModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 style="margin-bottom: 1rem;">🎮 Aventura7 en Roblox</h2>
-            <p style="margin-bottom: 1.5rem; color: var(--gray);">Haz clic en el botón para unirte a la aventura ahora mismo.</p>
-            <a href="https://www.roblox.com/games/123456789/AVENTURA7" target="_blank" class="game-link">👉 JUGAR AHORA</a>
-            <p style="margin-top: 1.5rem; font-size: 0.9rem;">¿Aún no tienes Roblox? <a href="#" style="color: var(--secondary);">Descárgalo gratis</a></p>
-        </div>
-    </div>
-
     <script>
-        // Smooth Scroll
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -927,43 +878,9 @@
             });
         });
 
-        // Modal functions
-        function openModal() {
-            document.getElementById('gameModal').style.display = 'flex';
-        }
-
-        function closeModal() {
-            document.getElementById('gameModal').style.display = 'none';
-        }
-
-        // Close modal with ESC
-        window.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
-
-        // Play trailer
-        function playTrailer() {
-            alert('🎬 Próximamente: Tráiler oficial de Aventura7');
-        }
-
-        // Mobile menu (simple)
+        // Mobile menu (placeholder)
         document.querySelector('.hamburger').addEventListener('click', function() {
-            alert('Menú móvil disponible en la versión completa');
-        });
-
-        // Prevent modal close when clicking inside
-        document.querySelector('.modal-content')?.addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
-
-        // Close modal when clicking outside
-        window.addEventListener('click', function(e) {
-            const modal = document.getElementById('gameModal');
-            if (e.target === modal) {
-                closeModal();
-            }
+            alert('Menú móvil próximamente');
         });
     </script>
 </body>
